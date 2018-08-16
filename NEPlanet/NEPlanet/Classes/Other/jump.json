@@ -1,0 +1,83 @@
+
+{
+    "code": 200,
+    "msg": "请求成功",
+    "data": {
+        "notices": {
+            "notices": null,
+            "noticeWindows": null,
+            "activityWindows": null
+        },
+        "jumpPages": {
+            "jumpPages": [{
+                          "id": 8,
+                          "red": 1,
+                          "isNeedLogin": 1,
+                          "link": "/equity",
+                          "moreLink": null,
+                          "logo": "https://epay.nosdn.127.net/iconhuiyuanquanyi.png",
+                          "name": "全民比特币",
+                          "desc": "共享海量数字资产",
+                          "title": "黑钻权益",
+                          "order": 9,
+                          "windows": {
+                          "content": null,
+                          "btnText": "",
+                          "img": ""
+                          },
+                          "taskId": null
+                          }, {
+                          "id": 5,
+                          "red": 1,
+                          "isNeedLogin": 1,
+                          "link": "/activity/list",
+                          "moreLink": null,
+                          "logo": "https://epay.nosdn.127.net/iconyuanlirenwu.png",
+                          "name": "精品好书《捡漏》",
+                          "desc": "银行到账1千万是什么感觉",
+                          "title": "阅读原力任务",
+                          "order": 8,
+                          "windows": {
+                          "content": null,
+                          "btnText": "",
+                          "img": ""
+                          },
+                          "taskId": 18
+                          }, {
+                          "id": 6,
+                          "red": 1,
+                          "isNeedLogin": 1,
+                          "link": "/activity/list",
+                          "moreLink": null,
+                          "logo": "https://epay.nosdn.127.net/iconyuanlirenwu.png",
+                          "name": "资讯",
+                          "desc": "浏览资讯获取原力",
+                          "title": "原力任务",
+                          "order": 5,
+                          "windows": {
+                          "content": null,
+                          "btnText": "",
+                          "img": ""
+                          },
+                          "taskId": 12
+                          }, {
+                          "id": 4,
+                          "red": 1,
+                          "isNeedLogin": 1,
+                          "link": "/activity/list",
+                          "moreLink": null,
+                          "logo": "https://epay.nosdn.127.net/zuanshi.png",
+                          "name": "体育赛事链上竞猜",
+                          "desc": "猜胜负，赢海量黑钻",
+                          "title": "黑钻活动",
+                          "order": 4,
+                          "windows": {
+                          "content": null,
+                          "btnText": "",
+                          "img": ""
+                          },
+                          "taskId": null
+                          }]
+        }
+    }
+}
