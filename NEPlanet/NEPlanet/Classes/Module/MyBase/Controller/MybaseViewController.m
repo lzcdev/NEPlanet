@@ -11,6 +11,8 @@
 #import "NetWorkTool.h"
 #import "NoticesAndJumpPagesModel.h"
 #import "CommonWebViewViewController.h"
+#import "DiamondView.h"
+#import "MyBaseHeaderView.h"
 
 static NSString * const iden = @"collectionCell";
 
@@ -18,6 +20,7 @@ static NSString * const iden = @"collectionCell";
 @property (nonatomic, strong) UIImageView *bgImageView;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) UIView *diamondBgView;
 
 @end
 
@@ -28,6 +31,7 @@ static NSString * const iden = @"collectionCell";
     
     [self setView];
     [self getDataAndRefresh];
+    [self coculatePosition];
 }
 
 - (void)getDataAndRefresh {
@@ -43,12 +47,90 @@ static NSString * const iden = @"collectionCell";
     [_collectionView reloadData];
 }
 
+- (void)coculatePosition {
+    int ScreenWidth = [UIScreen mainScreen].bounds.size.width;
+    
+    // 思路，网格布局，总共长*宽个点，可选取范围边界-半径
+    
+    NSMutableSet *mSet = [NSMutableSet new];
+    _diamondBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, ScreenWidth, 200)];
+    _diamondBgView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:_diamondBgView];
+    
+    for (int i = 0; i <= ScreenWidth-50; i++) {
+        for (int j = 0; j <= 150; j++) {
+            NSString *str = [NSString stringWithFormat:@"%d,%d",i,j];
+            [mSet addObject:str];
+        }
+    }
+    NSMutableArray *mArray = [NSMutableArray new];
+    mArray = [[mSet allObjects] copy];
+    
+    int x, y;
+    for (int i = 0; i < 10; i++) {
+        if (mArray.count < 50*50) {
+            return;
+        }
+        int r = arc4random() % mArray.count;
+        x = [[mArray[r] componentsSeparatedByString:@","][0] intValue];
+        y = [[mArray[r] componentsSeparatedByString:@","][1] intValue];
+        [self addDiamondViewWithFrame:CGRectMake(x, y, 50, 50)];
+        NSMutableSet *newSet = [NSMutableSet new];
+        
+        if (x < 50 && y < 50) {
+            for (int m = 0; m <= x+50; m++) {
+                for (int n = 0; n <= y+50; n++) {
+                    NSString *str = [NSString stringWithFormat:@"%d,%d",m,n];
+                    [newSet addObject:str];
+                }
+            }
+        } else if (x < 50 && y >= 50) {
+            for (int m = 0; m <= x+50; m++) {
+                for (int n = y - 50; n <= y+50; n++) {
+                    NSString *str = [NSString stringWithFormat:@"%d,%d",m,n];
+                    [newSet addObject:str];
+                }
+            }
+        } else if (x >= 50 && y < 50) {
+            for (int m = x-50; m <= x+50; m++) {
+                for (int n = 0; n <= y+50; n++) {
+                    NSString *str = [NSString stringWithFormat:@"%d,%d",m,n];
+                    [newSet addObject:str];
+                }
+            }
+        } else if (x >= 50 && y >= 50) {
+            for (int m = x-50; m <= x+50; m++) {
+                for (int n = y-50; n <= y+50; n++) {
+                    NSString *str = [NSString stringWithFormat:@"%d,%d",m,n];
+                    [newSet addObject:str];
+                }
+            }
+        } else {
+            NSLog(@"什么情况");
+        }
+//        NSLog(@"%@", newSet);
+        // 删除重复的元素
+        [mSet minusSet:newSet];
+        mArray = [[mSet allObjects] copy];
+    }
+}
+
+// 添加一个钻石
+- (void)addDiamondViewWithFrame:(CGRect)frame {
+    DiamondView *diamandView = [[DiamondView alloc] initWithFrame: frame];
+    [_diamondBgView addSubview:diamandView];
+}
+
 - (void)setView {
 
-    self.view.backgroundColor = [UIColor colorFromHexCode:@"#1B101B"];
+//    self.view.backgroundColor = [UIColor colorFromHexCode:@"#1B101B"];
+    self.view.backgroundColor = [UIColor redColor];
     _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-210)];
     [_bgImageView sd_setImageWithURL:[NSURL URLWithString:@"https://i.epay.126.net/m/at/static/img/star.5c0c3b3.png"]];
     [self.view addSubview:_bgImageView];
+    
+    MyBaseHeaderView *headerView = [[MyBaseHeaderView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+    [_bgImageView addSubview:headerView];
     
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];

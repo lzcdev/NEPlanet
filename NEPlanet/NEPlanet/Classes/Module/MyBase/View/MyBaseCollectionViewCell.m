@@ -16,7 +16,6 @@
 @property (nonatomic, strong) UILabel *lineLab;
 @property (nonatomic, strong) UILabel *lookTitleLab;
 
-
 @end
 
 @implementation MyBaseCollectionViewCell

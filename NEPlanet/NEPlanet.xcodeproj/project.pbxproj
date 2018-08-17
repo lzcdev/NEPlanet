@@ -32,6 +32,9 @@
 		CB7EBB9C2124268400FD338A /* jump.json in Resources */ = {isa = PBXBuildFile; fileRef = CB7EBB9B2124268400FD338A /* jump.json */; };
 		CB7EBB9F2124274000FD338A /* NoticesAndJumpPagesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EBB9E2124274000FD338A /* NoticesAndJumpPagesModel.m */; };
 		CB7EBBA221242C1400FD338A /* CommonWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EBBA121242C1400FD338A /* CommonWebViewViewController.m */; };
+		CB7EBC292126702700FD338A /* DiamondView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EBC282126702700FD338A /* DiamondView.m */; };
+		CB7EBC2C212673D100FD338A /* MyBaseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EBC2B212673D100FD338A /* MyBaseHeaderView.m */; };
+		CB7EBC2F21267D7700FD338A /* UIViewController+Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EBC2E21267D7700FD338A /* UIViewController+Injection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,12 @@
 		CB7EBB9E2124274000FD338A /* NoticesAndJumpPagesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticesAndJumpPagesModel.m; sourceTree = "<group>"; };
 		CB7EBBA021242C1400FD338A /* CommonWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonWebViewViewController.h; sourceTree = "<group>"; };
 		CB7EBBA121242C1400FD338A /* CommonWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonWebViewViewController.m; sourceTree = "<group>"; };
+		CB7EBC272126702700FD338A /* DiamondView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondView.h; sourceTree = "<group>"; };
+		CB7EBC282126702700FD338A /* DiamondView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondView.m; sourceTree = "<group>"; };
+		CB7EBC2A212673D100FD338A /* MyBaseHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBaseHeaderView.h; sourceTree = "<group>"; };
+		CB7EBC2B212673D100FD338A /* MyBaseHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBaseHeaderView.m; sourceTree = "<group>"; };
+		CB7EBC2D21267D7700FD338A /* UIViewController+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Injection.h"; sourceTree = "<group>"; };
+		CB7EBC2E21267D7700FD338A /* UIViewController+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Injection.m"; sourceTree = "<group>"; };
 		D7F30872712E4A2D8244E31B /* libPods-NEPlanetUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NEPlanetUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B797CD6BF6D804BE6963D7 /* libPods-NEPlanetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NEPlanetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5A2C9D245FA8903EDA1955 /* Pods-NEPlanet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEPlanet.release.xcconfig"; path = "Pods/Target Support Files/Pods-NEPlanet/Pods-NEPlanet.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +257,8 @@
 				CB7EBB912124005200FD338A /* APi.h */,
 				CB7EBB902124005200FD338A /* PrefixHeader.pch */,
 				CB7EBB9B2124268400FD338A /* jump.json */,
+				CB7EBC2D21267D7700FD338A /* UIViewController+Injection.h */,
+				CB7EBC2E21267D7700FD338A /* UIViewController+Injection.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -330,6 +341,10 @@
 			children = (
 				CB7EBB9821241A9700FD338A /* MyBaseCollectionViewCell.h */,
 				CB7EBB9921241A9700FD338A /* MyBaseCollectionViewCell.m */,
+				CB7EBC272126702700FD338A /* DiamondView.h */,
+				CB7EBC282126702700FD338A /* DiamondView.m */,
+				CB7EBC2A212673D100FD338A /* MyBaseHeaderView.h */,
+				CB7EBC2B212673D100FD338A /* MyBaseHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,14 +559,17 @@
 				CB7EBB302123F6AA00FD338A /* ViewController.m in Sources */,
 				CB7EBBA221242C1400FD338A /* CommonWebViewViewController.m in Sources */,
 				CB7EBB8E2124001B00FD338A /* UINavigationController+SXFixSpace.m in Sources */,
+				CB7EBC2F21267D7700FD338A /* UIViewController+Injection.m in Sources */,
 				CB7EBB702123FC5000FD338A /* PlanetDynamicViewController.m in Sources */,
 				CB7EBB6D2123FC3A00FD338A /* ForceTaskViewController.m in Sources */,
 				CB7EBB762123FCD000FD338A /* BaseNavigationViewController.m in Sources */,
+				CB7EBC2C212673D100FD338A /* MyBaseHeaderView.m in Sources */,
 				CB7EBB8A2124001B00FD338A /* NetWorkTool.m in Sources */,
 				CB7EBB3B2123F6AA00FD338A /* main.m in Sources */,
 				CB7EBB892124001B00FD338A /* UIColor+FlatUI.m in Sources */,
 				CB7EBB2D2123F6AA00FD338A /* AppDelegate.m in Sources */,
 				CB7EBB9721241A3300FD338A /* MybaseViewController.m in Sources */,
+				CB7EBC292126702700FD338A /* DiamondView.m in Sources */,
 				CB7EBB6A2123FC2A00FD338A /* CommonViewController.m in Sources */,
 				CB7EBB8D2124001B00FD338A /* UINavigationConfig.m in Sources */,
 				CB7EBB8F2124001B00FD338A /* UINavigationItem+SXFixSpace.m in Sources */,
