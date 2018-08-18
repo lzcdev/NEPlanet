@@ -70,7 +70,7 @@
     _whiteTitleLab.sd_layout.leftSpaceToView(self, 0).rightSpaceToView(self, 0).topSpaceToView(_centerImageView, 5).heightIs(20);
     _subTitleLab.sd_layout.leftSpaceToView(self, 0).rightSpaceToView(self, 0).topSpaceToView(_whiteTitleLab, 5).heightIs(20);
     _lineLab.sd_layout.leftSpaceToView(self, 0).rightSpaceToView(self, 0).topSpaceToView(_subTitleLab, 8).heightIs(1);
-    _lookTitleLab.sd_layout.leftSpaceToView(self, 0).rightSpaceToView(self, 0).topSpaceToView(_lineLab, 8).heightIs(20);
+    _lookTitleLab.sd_layout.leftSpaceToView(self, 0).rightSpaceToView(self, 0).topSpaceToView(_lineLab, 4).bottomSpaceToView(self, 0);
     
 }
 

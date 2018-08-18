@@ -25,8 +25,6 @@
     return self;
 }
 
-
-
 - (void)setView {
     _diamondImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.height/8, 0, self.frame.size.height/4*3, self.frame.size.height/4*3)];
     _diamondImageView.image = [UIImage imageNamed:@"diamond"];
@@ -38,9 +36,10 @@
     _textLabel.textColor = [UIColor whiteColor];
     _textLabel.font = [UIFont systemFontOfSize:11];
     _textLabel.textAlignment = NSTextAlignmentCenter;
-    _textLabel.text = @"0.07134";
+    float num = arc4random() % 10000;
+    _textLabel.text = [NSString stringWithFormat:@"%.5f", num / 100000];
     [self addSubview:_textLabel];
-    
+
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeSelf)];
     [self addGestureRecognizer:tap];
 }
