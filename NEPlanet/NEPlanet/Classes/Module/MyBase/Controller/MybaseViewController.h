@@ -9,5 +9,5 @@
 #import "CommonViewController.h"
 
 @interface MybaseViewController : CommonViewController
-
+@property (nonatomic, strong) UIView *diamondBgView;
 @end

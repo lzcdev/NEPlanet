@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B9F5395DCD7D1663D4D30CCE /* libPods-NEPlanet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6F92CEFE706A73EEA8CED4 /* libPods-NEPlanet.a */; };
+		CB6C68352126B6F100644017 /* DiamondTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6C68342126B6F100644017 /* DiamondTool.m */; };
 		CB7EBB2D2123F6AA00FD338A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EBB2C2123F6AA00FD338A /* AppDelegate.m */; };
 		CB7EBB302123F6AA00FD338A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7EBB2F2123F6AA00FD338A /* ViewController.m */; };
 		CB7EBB332123F6AA00FD338A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7EBB312123F6AA00FD338A /* Main.storyboard */; };
@@ -57,6 +58,8 @@
 /* Begin PBXFileReference section */
 		710A3D8C696B99D05FC477BA /* Pods-NEPlanet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEPlanet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NEPlanet/Pods-NEPlanet.debug.xcconfig"; sourceTree = "<group>"; };
 		AD6F92CEFE706A73EEA8CED4 /* libPods-NEPlanet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NEPlanet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6C68332126B6F100644017 /* DiamondTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiamondTool.h; sourceTree = "<group>"; };
+		CB6C68342126B6F100644017 /* DiamondTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiamondTool.m; sourceTree = "<group>"; };
 		CB7EBB282123F6AA00FD338A /* NEPlanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEPlanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7EBB2B2123F6AA00FD338A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB7EBB2C2123F6AA00FD338A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -345,6 +348,8 @@
 				CB7EBC282126702700FD338A /* DiamondView.m */,
 				CB7EBC2A212673D100FD338A /* MyBaseHeaderView.h */,
 				CB7EBC2B212673D100FD338A /* MyBaseHeaderView.m */,
+				CB6C68332126B6F100644017 /* DiamondTool.h */,
+				CB6C68342126B6F100644017 /* DiamondTool.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				CB7EBB3B2123F6AA00FD338A /* main.m in Sources */,
 				CB7EBB892124001B00FD338A /* UIColor+FlatUI.m in Sources */,
 				CB7EBB2D2123F6AA00FD338A /* AppDelegate.m in Sources */,
+				CB6C68352126B6F100644017 /* DiamondTool.m in Sources */,
 				CB7EBB9721241A3300FD338A /* MybaseViewController.m in Sources */,
 				CB7EBC292126702700FD338A /* DiamondView.m in Sources */,
 				CB7EBB6A2123FC2A00FD338A /* CommonViewController.m in Sources */,

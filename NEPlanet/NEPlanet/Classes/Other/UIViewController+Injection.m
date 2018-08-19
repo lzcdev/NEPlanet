@@ -11,11 +11,10 @@
 @implementation UIViewController (Injection)
 - (void)injected{
 #if DEBUG
-    [self configUI];
+    for (UIView *subView in self.view.subviews) {
+        [subView removeFromSuperview];
+    }
+    [self viewDidLoad];
 #endif
-}
-
-- (void)configUI{
-    NSAssert(YES, @"子类需要覆盖重写-(void)configUI，在这里配置UI");
 }
 @end

@@ -9,29 +9,49 @@
 #import "ForceTaskViewController.h"
 
 @interface ForceTaskViewController ()
-
+@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, assign) NSInteger count;
+@property (nonatomic, strong) CADisplayLink *link;
 @end
 
 @implementation ForceTaskViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    _count = 100;
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 200, 20)];
+    view.backgroundColor = [UIColor redColor];
+    [self.view addSubview:view];
+    
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 1000, 20)];
+    _label.text = @"123456789123456789123456789123456789";
+    _label.backgroundColor = [UIColor clearColor];
+    [view addSubview:_label];
+    
+     _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(loop)];
+    [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loop {
+    NSLog(@"1");
+    _label.frame = CGRectMake(_count--, 0, 1000, 20);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    [_link invalidate];
+    _link = nil;
 }
-*/
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [_link invalidate];
+    _link = nil;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [_link invalidate];
+    _link = nil;
+}
 @end
